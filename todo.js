@@ -1,5 +1,5 @@
 document.getElementById("myForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevents page reload
+  event.preventDefault(); 
 
   const form = event.target;
   const title = form.elements["title"].value;
