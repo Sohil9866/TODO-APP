@@ -6,7 +6,7 @@ if (!editTaskId) {
   alert("No task selected to edit!");
   window.location.href = "table.html";
 }
-
+//gets id of the task to be edited
 const tasks = JSON.parse(localStorage.getItem(TASKS_KEY)) || [];
 const taskIndex = tasks.findIndex((t) => t.id === editTaskId);
 const task = tasks[taskIndex];
@@ -22,6 +22,7 @@ document.getElementById("priority").value = task.priority;
 document.getElementById("deadline").value = task.deadline;
 document.getElementById("isCompleted").checked = task.isCompleted;
 
+//updates and replace in localstorage
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 

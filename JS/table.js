@@ -34,6 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//gets id of the task to be deleted
 function deleteTask(taskId) {
   let tasks = JSON.parse(localStorage.getItem("todoTasks")) || [];
   tasks = tasks.filter((task) => task.id !== taskId);

@@ -1,5 +1,6 @@
 const TASKS_KEY = "todoTasks";
 
+//tasks are fetched from Local Storage
 window.addEventListener("load", () => {
   const savedTasks = JSON.parse(localStorage.getItem(TASKS_KEY)) || [];
   savedTasks.forEach((task) => {
@@ -30,7 +31,7 @@ window.addEventListener("load", () => {
     });
   }
 });
-
+//adds the task to existing array and saves it
 function saveTask(task) {
   const tasks = JSON.parse(localStorage.getItem(TASKS_KEY)) || [];
   tasks.push(task);
